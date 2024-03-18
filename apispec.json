@@ -1,0 +1,57 @@
+{
+    "auth": {
+        "create": {
+            "uri": [
+                "auth"
+            ],
+            "method": "POST",
+            "body": [
+                "email",
+                "passcode"
+            ]
+        },
+        "checkToken": {
+            "uri": [
+                "auth"
+            ],
+            "method": "GET"
+        }
+    },
+
+    "user": {
+        "paginate": {
+            "uri": ["user"],
+            "method": "GET",
+            "query": [
+                "sorts",
+                "filters",
+                "offset",
+                "limit"
+            ]
+        },
+        "create": {
+            "uri": ["user"],
+            "method": "POST",
+            "body": [
+                "name",
+                "email",
+                "password",
+                "privilege"
+            ]
+        },
+        "get": {
+            "uri": ["user", "{id}"],
+            "method": "GET"
+        },
+        "confirm": {
+            "uri": ["user", "{id}"],
+            "method": "POST",
+            "body": [
+                "name",
+                "email",
+                "password",
+                "privilege"
+            ]
+        }
+    }
+}
